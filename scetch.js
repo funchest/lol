@@ -42,15 +42,14 @@ function keyPressed() {
 }
 
 function shallIaddobstaces(){
-    if(obstacles.length==0){
+    if (obstacles.length == 0) {
         obstacles.push(new obstacle(hole));
-    }
-    else if(obstacles.length>0&&obstacles.length<maxObstacles){
-        if(obstacles[obstacles.length-1].x<width-160){
+    } else if (obstacles.length > 0 && obstacles.length < maxObstacles) {
+        if ( obstacles[obstacles.length-1].x < width-250) {
             obstacles.push(new obstacle(hole));
         }
     }
-    if(obstacles[0].x<0){
+    if (obstacles[0].x < 0) {
         obstacles.shift();
     }
 }

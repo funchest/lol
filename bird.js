@@ -33,8 +33,7 @@ class Bird {
         for (let o of obstacles) {
             if (this.x > o.x && this.x < o.x + o.width) {
                 if (this.y < o.holeStart || this.y > o.holeStart + o.hole) {
-                    console.log('loss');
-                    return false;
+                    return true;
                 }
             }
         }
